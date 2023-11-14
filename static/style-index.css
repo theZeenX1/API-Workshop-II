@@ -1,0 +1,151 @@
+/*
+--text: #fcfdf6;
+--background: #080902;
+--primary: #2e1c97;
+--secondary: #160413;
+--accent: #3b24c2;
+--secondary-accent: #e8f623
+*/
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Gabarito", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 2.2rem;
+  background-color: #080902;
+  color: #fcfdf6;
+}
+
+/* HEADERS */
+
+.header-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 3.2em;
+  text-align: center;
+  color: #3b24c2;
+}
+
+.title-text {
+  display: inline;
+  background-color: #e4e4fa;
+  padding: 0rem 2rem 0rem 2rem;
+  border-radius: 1.8rem;
+}
+
+.logo {
+  height: 16rem;
+  padding-left: 4rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12rem 0 0rem;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
+.nav-item:link,
+.nav-item:visited {
+  text-decoration: none;
+  color: #fcfdf6;
+}
+/* MAIN BODY */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.details {
+  color: #3b24c2;
+}
+
+.form-card {
+  grid-column: 2 / 3;
+  text-align: center;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 5rem 2rem 5rem;
+  background-color: #e4e4fa;
+  border-radius: 1.4rem;
+}
+
+.form-title {
+  color: #2e1c97;
+}
+
+.form {
+  background-color: #2e1c97;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 6rem 5rem 6rem;
+  border-radius: 2rem;
+}
+
+.form-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+#form-email,
+#last-name-input,
+#first-name-input {
+  border: 0.2rem solid transparent;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: none;
+  color: inherit;
+  background-color: #4530b8;
+}
+
+.btn-submit {
+  border: 0.2rem solid transparent;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  outline: none;
+  background-color: #e8f623;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #e8f623d3;
+  border: 0.2rem solid transparent;
+}
+
+.btn-submit:active {
+  background-color: #f6d323;
+}
+
+.submit-txt {
+  color: #160413;
+  font-weight: 600;
+  font-size: 1.8rem;
+}

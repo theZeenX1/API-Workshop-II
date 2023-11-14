@@ -1,0 +1,105 @@
+<!-- {{ url_for('static', path='style-index.css') }} -->
+<!-- {{ url_for('static', path='logo.png') }} -->
+<!-- {{ url_for('static', path='script-index.js') }} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', path='style-index.css') }}"
+    />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header class="header-main">
+      <div class="header-logo">
+        <img
+          src="{{ url_for('static', path='logo.png') }}"
+          alt="ECES LOGO"
+          class="logo"
+        />
+      </div>
+      <section class="title">
+        <h1 class="title-text">API WORKSHOP</h1>
+      </section>
+      <ul class="nav-list">
+        <li>
+          <a
+            href="https://www.linkedin.com/company/ecea-nit-warangal/"
+            class="nav-item"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/eces.nitw/"
+            class="nav-item"
+            target="_blank"
+            >'Gram</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <section class="main-body">
+          <p class="details" id="1">
+            For more such events remember to follow all of our social media
+            outlets!
+          </p>
+          <p class="details" id="2">Fill out the form to receive the tokens.</p>
+          <h1 class="form-title">REGISTRATION FORM</h1>
+          <form action="" class="form">
+            <div class="form-item">
+              <label for="first-name-input">First Name</label>
+              <input
+                id="first-name-input"
+                type="text"
+                placeholder="Rohan"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="last-name-input">Last Name</label>
+              <input
+                id="last-name-input"
+                type="text"
+                placeholder="Gunjal"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="form-email">Email</label>
+              <input
+                id="form-email"
+                type="email"
+                placeholder="rg21ecb0a49@student.nitw.ac.in"
+                required
+              />
+            </div>
+            <div>
+              <button type="submit" class="btn-submit">
+                <p class="submit-txt">Submit</p>
+              </button>
+            </div>
+          </form>
+          <div id="error-message" style="display: None"></div>
+          <script src="{{ url_for('static', path='script-index.js') }}"></script>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

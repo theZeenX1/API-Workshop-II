@@ -1,0 +1,71 @@
+<!-- {{ url_for('static', path='style-user.css') }} -->
+<!-- {{ url_for('static', path='logo.png') }} -->
+<!-- {{ url_for('static', path='script-user.js') }} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', path='style-user.css') }}"
+    />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header class="header-main">
+      <div class="header-logo">
+        <img
+          src="{{ url_for('static', path='logo.png') }}"
+          alt="ECES LOGO"
+          class="logo"
+        />
+      </div>
+      <section class="title">
+        <h1 class="title-text">API WORKSHOP</h1>
+      </section>
+      <ul class="nav-list">
+        <li>
+          <a
+            href="https://www.linkedin.com/company/ecea-nit-warangal/"
+            class="nav-item"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/eces.nitw/"
+            class="nav-item"
+            target="_blank"
+            >'Gram</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main class="main-body">
+      <section class="main-grid">
+        <p class="welcome">Welcome👋,</p>
+        <h1 class="first-name">{{ fname }} {{ lname }}!</h1>
+        <div class="_id">
+          <div id="_id">{{ api_key }}</div>
+          <button id="btn">Copy</button>
+        </div>
+        <p class="you-have">
+          You have <b id="tokens">{{ tokens }}</b> tokens left.
+        </p>
+      </section>
+    </main>
+    <script src="{{ url_for('static', path='script-user.js') }}"></script>
+  </body>
+</html>
