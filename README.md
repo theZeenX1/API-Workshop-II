@@ -22,20 +22,20 @@ Moving on with the slides, here is the to-do list for today:
 >### Alright, so what's an app instance?
 Well this instance will help you create your base router for your webpage. It will help you create endpoints and routes to your website easily. Basically an initializer for you APIs.
 (Make a basic JSON response:
-    ```
+```
     @app.get(/)
     async def homepage():
         return JSONResponse(content={
           "message": "this is a response 😁"
-        })`
-    `@app.get(/{my_name})
+        })
+    @app.get(/{my_name})
     async def my_name(my_name: str):
         return JSONResponse(content={
           "message": "Say my name",
           "response": my_name,
           "👨🏻‍🍳": "good"
         })
-	```
+```
 )
 
 >### What are routes?
